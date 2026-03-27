@@ -127,6 +127,23 @@ target/site/allure-maven-plugin/index.html
 
 ---
 
+## Logging
+
+The project uses SLF4J for console logging during test execution.
+
+Logs are printed automatically to the console when running tests and include:
+- Browser setup and teardown events
+- Navigation to URL
+- Test failure notifications
+
+To view logs simply run:
+```bash
+mvn clean test
+```
+Logs appear in the terminal output in real time alongside test execution.
+
+---
+
 ## Parallel Execution
 
 Tests are executed in parallel across two browsers using TestNG's `@DataProvider(parallel = true)` and `ThreadLocal<WebDriver>` to ensure thread safety.
